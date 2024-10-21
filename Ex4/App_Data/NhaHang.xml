@@ -1,0 +1,104 @@
+﻿<NhaHang>
+
+	<Category CategoryId="L01" CategoryName="Lẩu">
+		<Product>
+			<ProductId>P001</ProductId>
+			<ProductName>Lẩu vịt</ProductName>
+			<Unit>Nồi</Unit>
+			<Price>150000</Price>
+		</Product>
+		<Product>
+			<ProductId>P002</ProductId>
+			<ProductName>Lẩu cá kèo</ProductName>
+			<Unit>Nồi</Unit>
+			<Price>250000</Price>
+		</Product>
+		<Product>
+			<ProductId>P003</ProductId>
+			<ProductName>Lẩu hải sản</ProductName>
+			<Unit>Nồi</Unit>
+			<Price>300000</Price>
+		</Product>
+		<Product>
+			<ProductId>P004</ProductId>
+			<ProductName>Lẩu thái</ProductName>
+			<Unit>Nồi</Unit>
+			<Price>180000</Price>
+		</Product>
+	</Category>
+
+	<Category CategoryId="L02" CategoryName="Tôm">
+		<Product>
+			<ProductId>P005</ProductId>
+			<ProductName>Tôm hấp sả</ProductName>
+			<Unit>Kg</Unit>
+			<Price>350000</Price>
+		</Product>
+		<Product>
+			<ProductId>P006</ProductId>
+			<ProductName>Tôm nướng</ProductName>
+			<Unit>Kg</Unit>
+			<Price>400000</Price>
+		</Product>
+		<Product>
+			<ProductId>P007</ProductId>
+			<ProductName>Tôm chiên bơ</ProductName>
+			<Unit>Kg</Unit>
+			<Price>420000</Price>
+		</Product>
+		<Product>
+			<ProductId>P008</ProductId>
+			<ProductName>Tôm xào hành</ProductName>
+			<Unit>Kg</Unit>
+			<Price>380000</Price>
+		</Product>
+	</Category>
+
+	<Category CategoryId="L03" CategoryName="Thịt">
+		<Product>
+			<ProductId>P009</ProductId>
+			<ProductName>Thịt heo nướng</ProductName>
+			<Unit>Kg</Unit>
+			<Price>280000</Price>
+		</Product>
+		<Product>
+			<ProductId>P010</ProductId>
+			<ProductName>Thịt gà rán</ProductName>
+			<Unit>Kg</Unit>
+			<Price>250000</Price>
+		</Product>
+	</Category>
+
+	<Category CategoryId="L04" CategoryName="Gỏi">
+		<Product>
+			<ProductId>P011</ProductId>
+			<ProductName>Gỏi cuốn</ProductName>
+			<Unit>Phần</Unit>
+			<Price>50000</Price>
+		</Product>
+		<Product>
+			<ProductId>P012</ProductId>
+			<ProductName>Gỏi đu đủ</ProductName>
+			<Unit>Phần</Unit>
+			<Price>60000</Price>
+		</Product>
+	</Category>
+
+	<Category CategoryId="L05" CategoryName="Món chay">
+		<Product>
+			<ProductId>P013</ProductId>
+			<ProductName>Đậu hũ xào rau</ProductName>
+			<Unit>Phần</Unit>
+			<Price>70000</Price>
+		</Product>
+		<Product>
+			<ProductId>P014</ProductId>
+			<ProductName>Gỏi rau củ</ProductName>
+			<Unit>Phần</Unit>
+			<Price>65000</Price>
+		</Product>
+	</Category>
+
+	<!-- Có thể thêm nhiều danh mục và sản phẩm khác ở đây -->
+
+</NhaHang>

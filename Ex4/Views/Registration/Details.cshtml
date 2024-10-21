@@ -1,0 +1,58 @@
+﻿@model Ex4.Models.RegistrationModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Registration Details</h2>
+
+<div>
+    <h4>Thông Tin Về Đơn Vị Tuyển</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Tên đơn vị tuyển</dt>
+        <dd>@Model.CompanyName</dd>
+
+        <dt>Loại hình doanh nghiệp</dt>
+        <dd>@Model.BusinessType</dd>
+
+        <dt>Số lượng nhân viên</dt>
+        <dd>@Model.EmployeeCount</dd>
+    </dl>
+
+    <h4>Thông Tin Liên Hệ</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Địa chỉ</dt>
+        <dd>@Model.Address</dd>
+
+        <dt>Người liên hệ</dt>
+        <dd>@Model.ContactPerson</dd>
+
+        <dt>Điện thoại</dt>
+        <dd>@Model.Phone</dd>
+
+        <dt>Fax</dt>
+        <dd>@Model.Fax</dd>
+
+        <dt>Email</dt>
+        <dd>@Model.Email</dd>
+
+        <dt>Website</dt>
+        <dd>@Model.Website</dd>
+    </dl>
+
+    <h4>Thông Tin Đăng Nhập</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Tên đăng nhập</dt>
+        <dd>@Model.Username</dd>
+
+        <dt>Nhận E-Mail</dt>
+        <dd>@(Model.ReceiveEmail ? "Yes" : "No")</dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

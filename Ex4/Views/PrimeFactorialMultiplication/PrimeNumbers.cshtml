@@ -1,0 +1,14 @@
+﻿
+@model List<int>
+@{
+    ViewBag.Title = "Prime Numbers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Prime Numbers from 1 to 100</h2>
+<ul>
+    @foreach (var prime in Model)
+    {
+        <li>@prime</li>
+    }
+</ul>

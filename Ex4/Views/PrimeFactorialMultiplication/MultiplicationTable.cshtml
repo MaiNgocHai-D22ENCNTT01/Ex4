@@ -1,0 +1,18 @@
+﻿
+@model Dictionary<int, Dictionary<int, int>>
+@{
+    ViewBag.Title = "Multiplication Table";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Multiplication Table from 2 to 9</h2>
+@foreach (var row in Model)
+{
+    <h3>Table of @row.Key</h3>
+    <ul>
+        @foreach (var col in row.Value)
+        {
+            <li>@row.Key x @col.Key = @col.Value</li>
+        }
+    </ul>
+}

@@ -1,0 +1,15 @@
+﻿
+@model List<long>
+@{
+    ViewBag.Title = "Factorials";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Factorials from 1 to 10</h2>
+<ul>
+    @for (int i = 1; i <= Model.Count; i++)
+    {
+        <li>@i! = @Model[i - 1]</li>
+    }
+</ul>
+

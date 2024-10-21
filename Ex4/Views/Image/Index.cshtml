@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Ex4.Models.ImageModel>
+
+@{
+    ViewBag.Title = "Manage Images";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Quản lý ảnh slide show</h2>
+
+@using (Html.BeginForm("Upload", "Image", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div>
+        <label>Upload ảnh:</label>
+        <input type="file" name="file" />
+        <input type="submit" value="Tải lên" />
+    </div>
+    <p>Khuyến cáo: Nên chọn kích thước ảnh 990x320 - Số lượng ảnh tối đa là 15</p>
+}
+
+@if (ViewBag.Message != null)
+{
+    <div style="color: red;">
+        @ViewBag.Message
+    </div>
+}
+
+<div class="image-gallery">
+    @foreach (var image in Model)
+    {
+        <div class="image-item">
+            <img src="@image.FilePath" alt="@image.FileName" />
+            @using (Html.BeginForm("Delete", "Image", FormMethod.Post, new { @class = "delete-button" }))
+            {
+                <input type="hidden" name="fileName" value="@image.FileName" />
+                <input type="submit" value="Delete" />
+            }
+        </div>
+    }
+</div>
+
+<style>
+    .image-gallery {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+        .image-gallery img {
+            margin-right: 10px;
+            width: 100px;
+            height: 100px;
+        }
+
+        .image-gallery .image-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .image-gallery .delete-button {
+            margin-top: 5px;
+        }
+</style>

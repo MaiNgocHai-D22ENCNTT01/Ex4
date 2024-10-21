@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Ex4.Models.Product>
+
+@{
+    ViewBag.Title = "Product List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Product List</h2>
+
+<select id="categorySelect" onchange="location.href='@Url.Action("Index", "Product")?categoryId=' + this.value;">
+    <option value="">Tất cả món ăn</option> <!-- Thêm tùy chọn để hiện tất cả món ăn -->
+    @foreach (var category in ViewBag.Categories as List<Ex4.Models.Category>)
+    {
+        <option value="@category.CategoryId" @(category.CategoryId == Request.QueryString["categoryId"] ? "selected" : "")>
+            @category.CategoryName
+        </option>
+    }
+</select>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>Tên món</th>
+        <th>Đơn vị tính</th>
+        <th>Giá</th>
+        <th>Xóa</th>
+        <th>Sửa</th>
+        <th>Chi tiết</th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ProductId }) 
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id=item.ProductId }) 
+            </td>
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProductId })
+        </td>
+    </tr>
+}
+
+</table>

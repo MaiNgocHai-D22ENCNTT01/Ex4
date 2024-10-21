@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse" title="more options">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Toggle button for the dropdown menu -->
+                    <li class="dropdown">
+                        <button class="btn btn-link dropdown-toggle" data-toggle="collapse" data-target="#optionalMenu" aria-expanded="false" aria-controls="optionalMenu">
+                            Toggle Menu
+                        </button>
+                        <div class="collapse" id="optionalMenu">
+                            <ul class="nav nav-pills nav-stacked">
+                                <li>@Html.ActionLink("ViewData", "VewDataTest", "PassingData", null, new { @class = "dropdown-item" })</li>
+                                <li>@Html.ActionLink("ViewBag", "VewBagTest", "PassingData", null, new { @class = "dropdown-item" })</li>
+                                <li>@Html.ActionLink("TempData", "TempDataTest", "PassingData", null, new { @class = "dropdown-item" })</li>
+                                <li>@Html.ActionLink("Razor variable If Else Switch", "Variable_If_Else_Switch", "RazorView", null, new { @class = "dropdown-item" })</li>
+                                <li>@Html.ActionLink("Razor Array Loop", "Array_Loop", "RazorView", null, new { @class = "dropdown-item" })</li>
+                                <li>@Html.ActionLink("Đăng ký", "FormRegister", "HTMLHelper", null, new { @class = "dropdown-item" })</li>
+                                <li>@Html.ActionLink("Prime Numbers", "PrimeNumbers", "PrimeFactorialMultiplication", null, new { @class = "dropdown-item" })</li>
+                                <li>@Html.ActionLink("Factorials", "Factorials", "PrimeFactorialMultiplication", null, new { @class = "dropdown-item" })</li>
+                                <li>@Html.ActionLink("Multiplication Table", "MultiplicationTable", "PrimeFactorialMultiplication", null, new { @class = "dropdown-item" })</li>
+                                <li>@Html.ActionLink("Registration Form", "Index", "Registration", null, new { @class = "dropdown-item" })</li>
+                                <li>@Html.ActionLink("Quản lý khách hàng", "GetCustomers", "Customer")</li>
+                                <li>@Html.ActionLink("Quản lý sản phẩm", "Index", "Product")</li>
+                                <li>@Html.ActionLink("Manage Images", "Index", "Image")</li>
+                                <li>@Html.ActionLink("Sử dụng HTML5 validate", "CreateOne", "Member")</li>
+                                <li>@Html.ActionLink("Tự validate", "CreateTwo", "Member")</li>
+                                <li>@Html.ActionLink("Sử dụng Annotation validate", "CreateThree", "Member")</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
